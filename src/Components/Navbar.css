@@ -1,0 +1,125 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #9c27b0;
+  background: linear-gradient(to right, #9c27b0, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.username {
+  font-weight: 600;
+  color: #333;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.login-button, .signup-button, .logout-button, .create-post-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.login-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #1976d2;
+}
+
+.signup-button {
+  background-color: white;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.signup-button:hover {
+  background-color: #f0f7fd;
+}
+
+.logout-button {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.logout-button:hover {
+  background-color: #e0e0e0;
+}
+
+.create-post-button {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.create-post-button:hover {
+  background-color: #7b1fa2;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-actions {
+    gap: 0.5rem;
+  }
+  
+  .login-button, .signup-button, .logout-button, .create-post-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .user-info {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .username {
+    max-width: 100px;
+  }
+} 

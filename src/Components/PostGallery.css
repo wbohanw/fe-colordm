@@ -1,0 +1,173 @@
+.post-gallery {
+  margin-bottom: 3rem;
+}
+
+.gallery-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  color: #333;
+}
+
+.featured-gallery .gallery-title {
+  color: #9c27b0; /* Purple for featured section */
+  border-bottom-color: #9c27b0;
+}
+
+.empty-gallery-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+  font-style: italic;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Post Card Styles */
+.post-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-color: white;
+  height: 100%;
+  cursor: pointer;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.post-card.featured {
+  box-shadow: 0 6px 12px rgba(156, 39, 176, 0.3); /* Purple shadow for featured cards */
+  border: 2px solid #9c27b0;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #9c27b0;
+  color: white;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background-color: #f0f0f0;
+}
+
+.post-thumbnail.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.post-content {
+  padding: 1rem;
+}
+
+.post-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.color-preview {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Auth Prompt */
+.auth-prompt {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.login-button, .signup-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.login-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+}
+
+.signup-button {
+  background-color: white;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+/* Loading and Error States */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #2196f3;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-container h2 {
+  color: #f44336;
+  margin-bottom: 0.5rem;
+} 
