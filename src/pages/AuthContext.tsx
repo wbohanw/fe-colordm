@@ -6,6 +6,13 @@ interface User {
   username?: string;
   id?: string;
   token?: string;
+  photoUrl?: string;
+  social?: {
+    twitter?: string;
+    instagram?: string;
+    github?: string;
+    linkedin?: string;
+  };
 }
 
 interface AuthContextType {

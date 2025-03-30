@@ -58,36 +58,74 @@ export default function Signup() {
   };
 
   return (
-    <div className="auth-page">
-      <h2>Sign Up</h2>
-      {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-      <p>
+    <div className="max-w-md mx-auto my-12">
+      <h2 className="text-3xl font-bold mb-8 text-center">Create your account</h2>
+      
+      {error && (
+        <div className="mb-6 p-3 bg-red-50 text-red-600 rounded-md">
+          {error}
+        </div>
+      )}
+      
+      <div className="bg-white p-8 rounded-lg shadow-sm">
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">
+              Username
+            </label>
+            <input
+              id="username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            />
+          </div>
+          
+          <button 
+            type="submit"
+            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
+      
+      <p className="mt-6 text-center text-gray-500">
         Already have an account?{' '}
-        <button onClick={() => navigate('/login')} className="link-button">
+        <button 
+          onClick={() => navigate('/login')} 
+          className="text-yellow-600 hover:underline font-medium"
+        >
           Log In
         </button>
       </p>
