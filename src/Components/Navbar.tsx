@@ -66,21 +66,21 @@ export default function Navbar() {
         <button 
           onClick={() => navigateTo('/main-color')}
           className="text-gray-700 hover:text-cyan-700 font-medium px-3 py-2 rounded-lg
-                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200"
+                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200 cursor-pointer"
         >
           Main Color
         </button>
         <button 
           onClick={() => navigateTo('/home')}
           className="text-gray-700 hover:text-cyan-700 font-medium px-3 py-2 rounded-lg
-                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200"
+                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200 cursor-pointer"
         >
           Gallery
         </button>
         <button 
           onClick={() => navigateTo('/playground')}
           className="text-gray-700 hover:text-cyan-700 font-medium px-3 py-2 rounded-lg
-                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200"
+                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200 cursor-pointer"
         >
           Playground
         </button>
@@ -88,7 +88,7 @@ export default function Navbar() {
           <button 
             onClick={handleCreatePost} 
             className="text-fuchsia-600 hover:text-fuchsia-700 font-medium px-3 py-2 rounded-lg
-                      hover:bg-fuchsia-50 transition-colors duration-200 flex items-center gap-1 border border-transparent hover:border-fuchsia-200"
+                      hover:bg-fuchsia-50 transition-colors duration-200 flex items-center gap-1 border border-transparent hover:border-fuchsia-200 cursor-pointer"
           >
             <FiEdit className="w-4 h-4" />
             Create Post
@@ -101,7 +101,7 @@ export default function Navbar() {
           <div className="relative" ref={userMenuRef}>
             <button 
               onClick={() => setShowUserMenu(!showUserMenu)}
-              className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-300"
+              className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-300 cursor-pointer"
             >
               <div className="h-9 w-9 rounded-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 flex items-center justify-center text-white font-semibold shadow-[0_0_8px_rgba(6,182,212,0.3)]">
                 {getUserInitial()}
@@ -124,14 +124,14 @@ export default function Navbar() {
                 <div className="py-1">
                   <button 
                     onClick={() => navigateTo('/create')}
-                    className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                    className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 cursor-pointer"
                   >
                     <FiEdit className="w-4 h-4" />
                     Create Post
                   </button>
                   <button 
                     onClick={() => navigateTo('/settings')}
-                    className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                    className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 cursor-pointer"
                   >
                     <FiSettings className="w-4 h-4" />
                     Settings
@@ -141,7 +141,7 @@ export default function Navbar() {
                 <div className="border-t border-gray-100 py-1">
                   <button 
                     onClick={handleLogout}
-                    className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-fuchsia-600 hover:bg-fuchsia-50"
+                    className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-fuchsia-600 hover:bg-fuchsia-50 cursor-pointer"
                   >
                     <FiLogOut className="w-4 h-4" />
                     Log Out
@@ -154,13 +154,13 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <button 
               onClick={handleLogin} 
-              className="py-2 px-4 rounded-lg font-medium border border-cyan-200 text-cyan-600 hover:bg-cyan-50 transition-colors"
+              className="py-2 px-4 rounded-lg font-medium border border-cyan-200 text-cyan-600 hover:bg-cyan-50 transition-colors cursor-pointer"
             >
               Log In
             </button>
             <button 
               onClick={handleSignup} 
-              className="py-2 px-4 rounded-lg font-medium text-white bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 transition-colors shadow-[0_0_10px_rgba(6,182,212,0.3)]"
+              className="py-2 px-4 rounded-lg font-medium text-white bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 transition-colors shadow-[0_0_10px_rgba(6,182,212,0.3)] cursor-pointer"
             >
               Sign Up
             </button>

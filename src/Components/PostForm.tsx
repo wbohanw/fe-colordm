@@ -253,7 +253,7 @@ export default function PostForm({ onCreate, postType = 'regular', userId }: Pos
           type="submit" 
           disabled={loading}
           className={`w-full py-4 font-semibold rounded-xl text-white text-base 
-                    transition-all ${loading ? 'opacity-50 cursor-not-allowed' : ''}
+                    transition-all ${loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
                     ${postType === 'featured' 
                       ? 'bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 shadow-purple/20 hover:shadow-lg' 
                       : 'bg-gray-900 hover:bg-gray-800 shadow-gray/20 hover:shadow-lg'}`}

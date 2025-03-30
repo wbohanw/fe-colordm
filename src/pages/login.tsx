@@ -84,7 +84,7 @@ export default function Login() {
           
           <button 
             type="submit"
-            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors"
+            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors cursor-pointer"
           >
             Login
           </button>
@@ -93,7 +93,7 @@ export default function Login() {
         <div className="mt-8 pt-6 border-t border-gray-200">
           <button 
             onClick={handleGoogleLogin} 
-            className="w-full p-3 border border-gray-300 rounded-md flex justify-center items-center font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+            className="w-full p-3 border border-gray-300 rounded-md flex justify-center items-center font-medium text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer"
           >
             <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -110,7 +110,7 @@ export default function Login() {
         Don't have an account?{' '}
         <button 
           onClick={() => navigate('/signup')} 
-          className="text-yellow-600 hover:underline font-medium"
+          className="text-yellow-600 hover:underline font-medium cursor-pointer"
         >
           Sign Up
         </button>

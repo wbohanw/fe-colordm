@@ -113,7 +113,7 @@ export default function Signup() {
           
           <button 
             type="submit"
-            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors"
+            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors cursor-pointer"
           >
             Sign Up
           </button>
@@ -124,7 +124,7 @@ export default function Signup() {
         Already have an account?{' '}
         <button 
           onClick={() => navigate('/login')} 
-          className="text-yellow-600 hover:underline font-medium"
+          className="text-yellow-600 hover:underline font-medium cursor-pointer"
         >
           Log In
         </button>

@@ -83,7 +83,7 @@ export default function Landing() {
           </p>
           <button 
             onClick={handleGetStarted} 
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-full inline-flex items-center hover:from-cyan-600 hover:to-cyan-700 transition-all shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] group"
+            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-full inline-flex items-center hover:from-cyan-600 hover:to-cyan-700 transition-all shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] group cursor-pointer"
           >
             <span>Enter System</span>
             <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -8,7 +8,7 @@ interface PostCardProps {
 export default function PostCard({ post, onClick }: PostCardProps) {
   // Generate gradient from post colors
   const gradientColors = post.colors?.length > 0 
-    ? post.colors.map(color => `rgb(${color.join(',')})`).join(', ')
+    ? post.colors.slice(0, 4).map(color => `rgb(${color.join(',')})`).join(', ')
     : '#f1f5f9';
 
   // Function to determine text color based on background color brightness

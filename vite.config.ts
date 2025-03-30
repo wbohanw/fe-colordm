@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://color-dorm-378d8e0e1e23.herokuapp.com',
         changeOrigin: true,
         secure: false,
       }
