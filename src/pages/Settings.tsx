@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import { FiUser, FiLock, FiLink, FiCamera, FiSave, FiAlertTriangle, FiCheck, FiInstagram, FiGithub, FiTwitter, FiLinkedin } from 'react-icons/fi';
+import { API_URL } from '../utils/api';
 
 interface SocialLinks {
   twitter: string;
@@ -102,7 +103,7 @@ export default function Settings() {
       }
 
       // Mock API call - replace with your actual API endpoint
-      const response = await fetch(`/api/users/${user.id}`, {
+      const response = await fetch(`${API_URL}/api/users/${user.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -150,7 +151,7 @@ export default function Settings() {
       setLoading(true);
       
       // Mock API call - replace with your actual API endpoint
-      const response = await fetch(`/api/users/${user.id}/password`, {
+      const response = await fetch(`${API_URL}/api/users/${user.id}/password`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -189,7 +190,7 @@ export default function Settings() {
       setLoading(true);
       
       // Mock API call - replace with your actual API endpoint
-      const response = await fetch(`/api/users/${user.id}/social`, {
+      const response = await fetch(`${API_URL}/api/users/${user.id}/social`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(socialLinks)

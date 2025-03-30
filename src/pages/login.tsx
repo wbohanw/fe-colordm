@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import { API_URL } from '../utils/api';
 
 export default function Login() {
   const [identifier, setIdentifier] = useState('');
@@ -15,7 +16,7 @@ export default function Login() {
       console.log('Logging in user:', { identifier, password });
       
       // We can use either username or email for login
-      const response = await fetch(`/api/users/${encodeURIComponent(identifier)}?password=${encodeURIComponent(password)}`, {
+      const response = await fetch(`${API_URL}/api/users/${encodeURIComponent(identifier)}?password=${encodeURIComponent(password)}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       });

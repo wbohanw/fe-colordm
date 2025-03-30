@@ -1,6 +1,7 @@
 import { useState} from 'react';
 import { Post } from '../types';
 import { FiAlertTriangle, FiLoader, FiUpload } from 'react-icons/fi';
+import { API_URL } from '../utils/api';
 
 interface PostFormProps {
   onCreate: (post: Post) => void;
@@ -106,7 +107,7 @@ export default function PostForm({ onCreate, postType = 'regular', userId }: Pos
       };
 
       const response = await fetch(
-        `/api/posts/${postType === 'featured' ? 'featured' : 'regular'}`,
+        `${API_URL}/api/posts/${postType === 'featured' ? 'featured' : 'regular'}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

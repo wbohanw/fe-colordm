@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ColorPalette from '../Components/ColorPalette';
 import { Post } from '../types';
+import { API_URL } from '../utils/api';
 
 export default function PostDetail() {
   const { id } = useParams<{ id: string }>();
@@ -15,7 +16,7 @@ export default function PostDetail() {
       try {
         setLoading(true);
         console.log(`Fetching post with ID: ${id}`);
-        const response = await fetch(`/api/posts/${id}`);
+        const response = await fetch(`${API_URL}/api/posts/${id}`);
         
         if (!response.ok) {
           const errorData = await response.json();

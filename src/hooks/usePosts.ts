@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Post } from '../types';
+import { API_URL } from '../utils/api';
 
 interface PostsState {
   regularPosts: Post[];
@@ -23,14 +24,14 @@ export function usePosts() {
         setLoading(true);
         
         // Fetch regular posts
-        const regularResponse = await fetch('/api/posts/regular');
+        const regularResponse = await fetch(`${API_URL}/api/posts/regular`);
         if (!regularResponse.ok) {
           throw new Error('Failed to fetch regular posts');
         }
         const regularData = await regularResponse.json();
         
         // Fetch featured posts
-        const featuredResponse = await fetch('/api/posts/featured');
+        const featuredResponse = await fetch(`${API_URL}/api/posts/featured`);
         if (!featuredResponse.ok) {
           throw new Error('Failed to fetch featured posts');
         }

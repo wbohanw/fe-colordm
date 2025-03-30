@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import { API_URL } from '../utils/api';
 
 export default function Signup() {
   const [username, setUsername] = useState('');
@@ -16,7 +17,7 @@ export default function Signup() {
       console.log('Registering user:', { username, email, password });
       
       // Create a new user
-      const registerResponse = await fetch('/api/users', {
+      const registerResponse = await fetch(`${API_URL}/api/users`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password })
@@ -31,7 +32,7 @@ export default function Signup() {
 
       // After successful registration, login with username
       // We could use either username or email now that we've updated the backend
-      const loginResponse = await fetch(`/api/users/${encodeURIComponent(username)}?password=${encodeURIComponent(password)}`, {
+      const loginResponse = await fetch(`${API_URL}/api/users/${encodeURIComponent(username)}?password=${encodeURIComponent(password)}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       });
