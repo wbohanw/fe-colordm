@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Post } from '../types';
-import { API_URL } from '../utils/api';
 
 export default function usePost(postId: string | undefined) {
   const [post, setPost] = useState<Post | null>(null);
@@ -17,7 +16,7 @@ export default function usePost(postId: string | undefined) {
 
       try {
         setLoading(true);
-        const response = await fetch(`${API_URL}/api/posts/${postId}`);
+        const response = await fetch(`/api/posts/${postId}`);
         
         if (!response.ok) {
           const errorData = await response.json();

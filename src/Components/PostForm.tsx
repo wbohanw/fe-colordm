@@ -1,7 +1,6 @@
 import { useState} from 'react';
 import { Post } from '../types';
 import { FiAlertTriangle, FiLoader, FiUpload } from 'react-icons/fi';
-import { API_URL } from '../utils/api';
 
 interface PostFormProps {
   onCreate: (post: Post) => void;
@@ -107,7 +106,7 @@ export default function PostForm({ onCreate, postType = 'regular', userId }: Pos
       };
 
       const response = await fetch(
-        `${API_URL}/api/posts/${postType === 'featured' ? 'featured' : 'regular'}`,
+        `/api/posts/${postType === 'featured' ? 'featured' : 'regular'}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -254,7 +253,7 @@ export default function PostForm({ onCreate, postType = 'regular', userId }: Pos
           type="submit" 
           disabled={loading}
           className={`w-full py-4 font-semibold rounded-xl text-white text-base 
-                    transition-all ${loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+                    transition-all ${loading ? 'opacity-50 cursor-not-allowed' : ''}
                     ${postType === 'featured' 
                       ? 'bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 shadow-purple/20 hover:shadow-lg' 
                       : 'bg-gray-900 hover:bg-gray-800 shadow-gray/20 hover:shadow-lg'}`}

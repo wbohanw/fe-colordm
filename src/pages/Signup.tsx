@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
-import { API_URL } from '../utils/api';
 
 export default function Signup() {
   const [username, setUsername] = useState('');
@@ -17,7 +16,7 @@ export default function Signup() {
       console.log('Registering user:', { username, email, password });
       
       // Create a new user
-      const registerResponse = await fetch(`${API_URL}/api/users`, {
+      const registerResponse = await fetch('/api/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password })
@@ -32,7 +31,7 @@ export default function Signup() {
 
       // After successful registration, login with username
       // We could use either username or email now that we've updated the backend
-      const loginResponse = await fetch(`${API_URL}/api/users/${encodeURIComponent(username)}?password=${encodeURIComponent(password)}`, {
+      const loginResponse = await fetch(`/api/users/${encodeURIComponent(username)}?password=${encodeURIComponent(password)}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       });
@@ -114,7 +113,7 @@ export default function Signup() {
           
           <button 
             type="submit"
-            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors cursor-pointer"
+            className="w-full p-3 bg-yellow-400 text-gray-900 font-semibold rounded-md hover:bg-yellow-500 transition-colors"
           >
             Sign Up
           </button>
@@ -125,7 +124,7 @@ export default function Signup() {
         Already have an account?{' '}
         <button 
           onClick={() => navigate('/login')} 
-          className="text-yellow-600 hover:underline font-medium cursor-pointer"
+          className="text-yellow-600 hover:underline font-medium"
         >
           Log In
         </button>

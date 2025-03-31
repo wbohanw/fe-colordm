@@ -84,6 +84,13 @@ export default function Navbar() {
         >
           Playground
         </button>
+        <button 
+          onClick={() => navigateTo('/copilot')}
+          className="text-gray-700 hover:text-cyan-700 font-medium px-3 py-2 rounded-lg
+                    hover:bg-cyan-50 transition-colors duration-200 border border-transparent hover:border-cyan-200 cursor-pointer"
+        >
+          Copilot
+        </button>
         {isAuthenticated && (
           <button 
             onClick={handleCreatePost} 

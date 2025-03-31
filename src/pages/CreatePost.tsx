@@ -32,7 +32,7 @@ export default function CreatePost() {
       
       <div className="flex justify-center mb-6 gap-4">
         <button 
-          className={`py-3 px-6 rounded-md font-semibold transition-all cursor-pointer ${
+          className={`py-3 px-6 rounded-md font-semibold transition-all ${
             postType === 'regular' 
               ? 'bg-white border-2 border-blue-500 text-blue-500' 
               : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -42,7 +42,7 @@ export default function CreatePost() {
           Regular Post
         </button>
         <button 
-          className={`py-3 px-6 rounded-md font-semibold transition-all cursor-pointer ${
+          className={`py-3 px-6 rounded-md font-semibold transition-all ${
             postType === 'featured' 
               ? 'bg-white border-2 border-blue-500 text-blue-500' 
               : 'bg-gray-100 text-gray-600 hover:bg-gray-200'

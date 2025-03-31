@@ -34,7 +34,7 @@ function DraggableColorItem({
       {/* Remove button with improved feedback */}
       <button 
         onClick={handleRemoveClick}
-        className="absolute -top-1 -right-1 bg-white text-gray-600 hover:text-red-500 hover:bg-red-50 rounded-full w-6 h-6 flex items-center justify-center shadow-md border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 transform group-hover:rotate-90 hover:rotate-0 cursor-pointer"
+        className="absolute -top-1 -right-1 bg-white text-gray-600 hover:text-red-500 hover:bg-red-50 rounded-full w-6 h-6 flex items-center justify-center shadow-md border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-200 z-10 transform group-hover:rotate-90 hover:rotate-0"
         aria-label={`Remove ${color} color`}
       >
         <FiX size={14} />
@@ -253,7 +253,7 @@ export default function Playground() {
               <div className="p-5 border-b border-gray-100">
                 <button 
                   onClick={rollDice}
-                  className="w-full py-3 group relative overflow-hidden rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  className="w-full py-3 group relative overflow-hidden rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   <div className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                   <div className="flex items-center justify-center gap-3">
@@ -271,7 +271,7 @@ export default function Playground() {
                     <button
                       key={color}
                       onClick={() => addColor(color)}
-                      className="aspect-square rounded-md shadow-sm hover:scale-110 hover:shadow-md transition-all duration-200 relative group cursor-pointer"
+                      className="aspect-square rounded-md shadow-sm hover:scale-110 hover:shadow-md transition-all duration-200 relative group"
                       style={{ backgroundColor: color }}
                       aria-label={`Add ${color} color`}
                     >
@@ -305,14 +305,14 @@ export default function Playground() {
                 <div className="flex gap-2">
                   <button 
                     onClick={copyGradientCSS}
-                    className="flex items-center gap-1 px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors cursor-pointer"
+                    className="flex items-center gap-1 px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
                   >
                     <FiSave size={14} />
                     <span>Copy CSS</span>
                   </button>
                   <button 
                     onClick={exportGradient}
-                    className="flex items-center gap-1 px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity shadow-sm cursor-pointer"
+                    className="flex items-center gap-1 px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity shadow-sm"
                   >
                     <FiDownload size={14} />
                     <span>Export</span>
@@ -353,7 +353,7 @@ export default function Playground() {
                     <span className="text-xs font-medium text-gray-500">CSS Code</span>
                     <button 
                       onClick={copyGradientCSS}
-                      className="text-xs text-blue-600 hover:text-blue-800 transition-colors cursor-pointer"
+                      className="text-xs text-blue-600 hover:text-blue-800 transition-colors"
                     >
                       Copy to clipboard
                     </button>
@@ -381,7 +381,7 @@ export default function Playground() {
                           setGradientType('linear');
                           updateGradient(gradientItems);
                         }}
-                        className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
+                        className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                           gradientType === 'linear' 
                             ? 'bg-blue-500 text-white shadow-md' 
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -394,7 +394,7 @@ export default function Playground() {
                           setGradientType('radial');
                           updateGradient(gradientItems);
                         }}
-                        className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
+                        className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                           gradientType === 'radial' 
                             ? 'bg-blue-500 text-white shadow-md' 
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -420,7 +420,7 @@ export default function Playground() {
                               setGradientDirection(direction);
                               updateGradient(gradientItems);
                             }}
-                            className={`p-2 rounded-lg text-xs transition-all duration-200 cursor-pointer ${
+                            className={`p-2 rounded-lg text-xs transition-all duration-200 ${
                               gradientDirection === direction 
                                 ? 'bg-blue-500 text-white shadow-sm' 
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -436,7 +436,7 @@ export default function Playground() {
                   <div className="flex gap-2 pt-2">
                     <button
                       onClick={clearColors}
-                      className="flex-1 py-2 px-3 bg-red-50 text-red-600 rounded-lg text-sm font-medium hover:bg-red-100 transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                      className="flex-1 py-2 px-3 bg-red-50 text-red-600 rounded-lg text-sm font-medium hover:bg-red-100 transition-colors flex items-center justify-center gap-1"
                     >
                       <FiTrash2 size={14} />
                       Clear All
@@ -451,7 +451,7 @@ export default function Playground() {
                   <h2 className="text-lg font-semibold text-gray-900">Color Palette</h2>
                   <button
                     onClick={addRandomColor}
-                    className="text-sm text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1 cursor-pointer"
+                    className="text-sm text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />

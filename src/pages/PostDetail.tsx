@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ColorPalette from '../Components/ColorPalette';
 import { Post } from '../types';
-import { API_URL } from '../utils/api';
 
 export default function PostDetail() {
   const { id } = useParams<{ id: string }>();
@@ -16,7 +15,7 @@ export default function PostDetail() {
       try {
         setLoading(true);
         console.log(`Fetching post with ID: ${id}`);
-        const response = await fetch(`${API_URL}/api/posts/${id}`);
+        const response = await fetch(`/api/posts/${id}`);
         
         if (!response.ok) {
           const errorData = await response.json();
@@ -73,7 +72,7 @@ export default function PostDetail() {
       <p className="text-gray-600 mb-6">{error}</p>
       <button 
         onClick={() => navigate('/')} 
-        className="px-5 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors cursor-pointer"
+        className="px-5 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
       >
         Back to Home
       </button>
@@ -90,7 +89,7 @@ export default function PostDetail() {
       <h2 className="text-2xl font-bold mb-2">Post Not Found</h2>
       <button 
         onClick={() => navigate('/')} 
-        className="px-5 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors cursor-pointer"
+        className="px-5 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
       >
         Back to Home
       </button>
@@ -102,7 +101,7 @@ export default function PostDetail() {
       <div className="mb-8">
         <button 
           onClick={() => navigate('/')} 
-          className="inline-flex items-center text-gray-500 hover:text-gray-700 cursor-pointer"
+          className="inline-flex items-center text-gray-500 hover:text-gray-700"
         >
           <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

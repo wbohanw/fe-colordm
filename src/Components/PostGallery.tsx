@@ -28,7 +28,7 @@ export default function PostGallery({
         {posts.length > 0 && (
           <button 
             onClick={() => navigate('/home')}
-            className="text-sm text-gray-500 hover:text-gray-800 cursor-pointer"
+            className="text-sm text-gray-500 hover:text-gray-800"
           >
             View all →
           </button>
